@@ -40,6 +40,39 @@ stream$.subscribe({
 stream$.calculateSum(2, 5);
 // Logger: 7
 
+//============================================================================
+class Singleton {
+    static _instance;
+
+    constructor() {
+      if (!Singleton._instance) {
+        Singleton._instance = this;
+      }
+      this.id = Math.random();
+      return Singleton._instance;
+    }
+  }
+
+const a = new Singleton();
+const b = new Singleton();
+
+console.log('a:', a);
+console.log('b', b);
+
+console.log(a === b);
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
